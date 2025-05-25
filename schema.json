@@ -1,0 +1,88 @@
+{
+    "fields": [
+        {
+            "name": "date",
+            "type": "STRING",
+            "mode": "REQUIRED"
+        },
+        {
+            "name": "total_requests",
+            "type": "INTEGER",
+            "mode": "REQUIRED"
+        }, 
+        {
+            "name": "ip_unique",
+            "type": "INTEGER",
+            "mode": "REQUIRED"
+        },
+        {
+            "name": "frequent_path",
+            "type": "RECORD",
+            "mode": "REQUIRED",
+            "fields": [
+                {
+                    "name": "path",
+                    "type": "STRING",
+                    "mode": "REPEATED"
+                },
+                {
+                    "name": "count",
+                    "type": "INTEGER",
+                    "mode": "REQUIRED"
+                }
+            ]
+        },
+        {
+            "name": "status",
+            "type": "RECORD",
+            "mode": "REQUIRED",
+            "fields": [
+                {
+                    "name": "informational_100_199",
+                    "type": "STRING",
+                    "mode": "REQUIRED"
+                },
+                {
+                    "name": "successful_200_299",
+                    "type": "STRING",
+                    "mode": "REQUIRED"
+                },
+                {
+                    "name": "redirection_300_399",
+                    "type": "STRING",
+                    "mode": "REQUIRED"
+                },
+                {
+                    "name": "client_400_499",
+                    "type": "STRING",
+                    "mode": "REQUIRED"
+                },
+                {
+                    "name": "server_500_599",
+                    "type": "STRING",
+                    "mode": "REQUIRED"
+                }
+            ]
+        },
+        {
+            "name": "frequent_referrer",
+            "type": "RECORD",
+            "mode": "REQUIRED",
+            "fields": [
+                {
+                    "name": "referrer",
+                    "type": "STRING",
+                    "mode": "REPEATED"
+                },
+                {
+                    "name": "count",
+                    "type": "INTEGER",
+                    "mode": "REQUIRED"
+                }
+            ]
+        }
+    ]
+}
+
+
+
